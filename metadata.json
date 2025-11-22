@@ -1,0 +1,5 @@
+{
+  "name": "Copy of leXearch - AI Context Companion",
+  "description": "A web-based simulation of the leXearch Chrome Extension. Select text to instantly trigger AI explanations, definitions, or translation using customizable prompt templates.",
+  "requestFramePermissions": []
+}

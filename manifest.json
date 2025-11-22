@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "leXearch - AI Context Companion",
+    "version": "1.0.0",
+    "description": "AI-powered reading assistant for any website",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "http://localhost:3002/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
