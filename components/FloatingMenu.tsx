@@ -129,7 +129,8 @@ export const FloatingMenu: React.FC<FloatingMenuProps> = ({
             },
             (response) => {
               if (chrome.runtime.lastError) {
-                console.error("Runtime Error:", chrome.runtime.lastError);
+                const errorMsg = chrome.runtime.lastError.message;
+                console.error("Runtime Error:", errorMsg);
                 // If context is invalidated, this usually happens here
                 const errorStr = chrome.runtime.lastError.message || "Runtime error";
                 if (errorStr.includes("Extension context invalidated")) {
