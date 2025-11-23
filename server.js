@@ -63,14 +63,8 @@ app.post('/api/generate', async (req, res) => {
 });
 
 // Serve static files in production
-if (process.env.NODE_ENV === 'production') {
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
-    app.use(express.static(path.join(__dirname, 'dist')));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-    });
-}
+// Static file serving removed for extension backend
+// if (process.env.NODE_ENV === 'production') { ... }
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
