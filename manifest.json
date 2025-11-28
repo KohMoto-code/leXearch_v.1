@@ -4,8 +4,6 @@
     "version": "1.0.0",
     "description": "AI-powered reading assistant for any website",
     "permissions": [
-        "activeTab",
-        "scripting",
         "storage"
     ],
     "host_permissions": [
